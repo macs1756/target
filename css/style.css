@@ -1497,6 +1497,11 @@ footer {
   top: calc(100% - 16px);
 }
 
+.slider__arrow {
+  position: relative;
+  z-index: 2;
+}
+
 .module-white {
   border: 4px solid #5A6CFF;
   color: #000;
