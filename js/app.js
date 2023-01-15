@@ -44,6 +44,8 @@ const DETAILED = document.querySelectorAll('.aftercourse__detailed');
 
 if(DETAILED.length > 0){
 	DETAILED.forEach(delailed=>{
+
+
 		delailed.addEventListener('click', ()=>{
 			delailed.nextElementSibling.classList.toggle('active');
 		});
@@ -55,6 +57,64 @@ if(DETAILED.length > 0){
 		delailed.addEventListener('mouseout', ()=>{
 			delailed.nextElementSibling.classList.remove('active');
 		});
+
+		
 	});
 }
+
+
+const TARIFF_ITEM = document.querySelectorAll('.tariff__item');
+
+
+if(TARIFF_ITEM.length > 0 ){
+	TARIFF_ITEM.forEach(item=>{
+		if(item.dataset.active == "not"){
+			item.style.opacity = '0.38';
+			item.querySelector('span').style.textDecoration = 'line-through';
+		}
+
+		if(item.dataset.active == "top"){
+		
+			item.style.background = 'rgba(232, 215, 146, 0.4)';
+			item.style.borderRadius = '12px';
+		}
+
+	});
+}
+
+
+const swiper = new Swiper('.swiper-review', {
+	effect: 'fade',
+	navigation: {
+		prevEl: '.review__prev',
+		nextEl: '.review__next',
+	}
+});
+
+
+const QUESTIONS = document.querySelectorAll('.subfooter__item');
+
+if(QUESTIONS.length>0){
+	
+	QUESTIONS.forEach((question)=>{
+		question.addEventListener('click', function(){
+			this.classList.toggle('active');
+			this.nextElementSibling.classList.toggle('active');		
+		});
+	});
+	
+}
+
+
+
+
+new Swiper('.swiper-module', {
+	slidesPerView: 3,
+	spaceBetween: 32,
+	navigation: {
+		prevEl: ".program__prev",
+		nextEl: ".program__next",
+	}
+})
+
 
