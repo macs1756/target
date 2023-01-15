@@ -1383,6 +1383,7 @@ footer {
      -moz-column-gap: 30px;
           column-gap: 30px;
   row-gap: 140px;
+  padding-bottom: 140px;
 }
 
 .slider__arrow {
@@ -1479,6 +1480,7 @@ footer {
   border-radius: 5px;
   padding: 6px 8px;
   max-width: 280px;
+  width: 100%;
 }
 
 .module__addition-question a,
@@ -2103,6 +2105,15 @@ footer {
   padding: 10px;
 }
 
+.aftercourse__detailed {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 @media (min-width: 601px) {
   .burger__body {
     display: none;
@@ -2532,8 +2543,8 @@ footer {
   }
 
   .review__net-slider {
-    -ms-flex-preferred-size: calc(200px + 110 * ((100vw - 320px) / 1920));
-        flex-basis: calc(200px + 110 * ((100vw - 320px) / 1920));
+    -ms-flex-preferred-size: calc(250px + 60 * ((100vw - 320px) / 1920));
+        flex-basis: calc(250px + 60 * ((100vw - 320px) / 1920));
   }
 
   .review__net-slider .swiper-slide {
@@ -2714,6 +2725,10 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  .program {
+    padding-bottom: 0;
   }
 
   .tariff__net {
@@ -2940,6 +2955,13 @@ footer {
     font-family: "Alegreyasans";
   }
 
+  .module__resuit-body {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+            transform: translate(-50%);
+  }
+
   .tariff__net {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -2951,6 +2973,10 @@ footer {
 
   .case__net-item {
     padding: 16px;
+  }
+
+  .review .slider__arrow {
+    display: none;
   }
 
   .review__net-slider {
