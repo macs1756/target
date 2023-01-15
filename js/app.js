@@ -45,18 +45,21 @@ const DETAILED = document.querySelectorAll('.aftercourse__detailed');
 if(DETAILED.length > 0){
 	DETAILED.forEach(delailed=>{
 
-
-		delailed.addEventListener('click', ()=>{
-			delailed.nextElementSibling.classList.toggle('active');
-		});
-
-		delailed.addEventListener('mouseover', ()=>{
-			delailed.nextElementSibling.classList.add('active');
-		});
-
-		delailed.addEventListener('mouseout', ()=>{
-			delailed.nextElementSibling.classList.remove('active');
-		});
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			// код для мобильных устройств
+			delailed.addEventListener('click', ()=>{
+				delailed.nextElementSibling.classList.toggle('active');
+			});
+		 } else {
+			// код для обычных устройств
+			delailed.addEventListener('mouseover', ()=>{
+				delailed.nextElementSibling.classList.add('active');
+			});
+	
+			delailed.addEventListener('mouseout', ()=>{
+				delailed.nextElementSibling.classList.remove('active');
+			});
+	  }
 
 		
 	});
